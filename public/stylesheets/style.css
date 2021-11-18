@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "sans-serif", Helvetica, Arial;
 }
 
 a {
@@ -11,3 +11,61 @@ a {
   background-color: aquamarine;
   width: 120px;
   }
+
+  body {
+    padding: 50px;
+    font: 14px "Arial", Helvetica, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  .costumeAttr {
+    background-color: rgb(123, 223, 29);
+    width: 120px;
+    margin: 6px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    border-radius: 5px;
+    font-weight:normal;
+  }
+  
+  .nameone {
+    width: 150px;
+    margin: 7px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight:normal;
+  }
+  
+  #titlestyle{
+    color: blue;
+    font-weight: 500;
+    font-family:'serif', Times, serif;
+    text-decoration:solid;
+  }
+  
+  .variety{
+    margin-right: 5px;
+    margin-bottom: 0;
+    padding: 8px;
+    justify-content:center;
+    font-weight: normal;
+    border-bottom: 3px solid rgb(126, 7, 206);
+    border-left: 3px solid  rgb(19, 29, 6);
+    background-color: purple;
+    border-radius: 4px;
+  }
+
+  .stylesheetnew{
+      border-top: 4px solid orangered;
+      width: 60%;
+  }
+
+  .variety:hover{
+    background-color: rgb(7, 31, 167);
+    color: greenyellow;
+    }
