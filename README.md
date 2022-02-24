@@ -43,3 +43,21 @@ class ViewController: UIViewController {
     }
     
 }
+
+
+
+
+An IBOutlet (Interface Builder outlet) is a variable which is a reference to a UI component.
+
+An IBAction (Interface Builder action) is a function which is called when a specific user interaction occurs.
+@IBOutlet is used to reference the view from your controller code.
+@IBAction is used to view call a method in your controller code when the user interacts with the view.
+func avg(arr1 Double...) -> Double {
+    var total = 0.0
+    for x in arr1 {
+        total += x
+    }
+    let count= Double(x.count)
+    var average = total/count
+    return average
+}
