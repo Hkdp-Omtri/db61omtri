@@ -1,63 +1,46 @@
+import UIKit
+
 class ViewController: UIViewController {
-    
-    let array = [1,2,3,4,5,6]
-    var random1 = 0
-    var random2 = 0
-    @IBOutlet weak var TextOutlet1: UITextField!
+
+    @IBOutlet weak var EnterName: UITextField!
     
     
-    @IBOutlet weak var TextOutlet2: UITextField!
+    @IBOutlet weak var INR: UITextField!
     
-    @IBOutlet weak var Label1: UILabel!
-    
-    @IBOutlet weak var Label2: UILabel!
+    @IBOutlet weak var USD: UITextField!
     
     
-    @IBOutlet weak var WinLabel: UILabel!
+    @IBOutlet weak var DisplayLabel: UILabel!
     
+    @IBOutlet weak var DisplayLabel1: UILabel!
+    
+    @IBOutlet weak var DisplayLabel2: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
 
-    @IBAction func ButtonClicked(_ sender: Any) {
+    @IBAction func ConvertCurrrency(_ sender: UIButton) {
         
-        random1 = Int(arc4random_uniform(6))
-        random2 = Int(arc4random_uniform(6))
-        Label1.text = TextOutlet1.text! + "'s roll is :" + String(random1)
-        Label2.text = TextOutlet2.text! + "'s roll is :" + String(random2)
+        var name = EnterName.text!
+        var Inr = INR.text!
+        var Usd = USD.text!
+        var INRx = Double(INR.text!)
+        var USDx = Double(USD.text!)
+        var dollars = (INRx!/74.64)
+        var dollarsround = round(dollars)
+        var rupees = (USDx!*74.64)
+        var rupeesround = round(rupees)
         
-        if(random1>random2)
-        {
-            WinLabel.text = TextOutlet1.text! + " won the game"
-        }
-        else if(random2>random1)
-        {
-            WinLabel.text = TextOutlet2.text! + " won the game"
-        }
-        else{
-            WinLabel.text = "The game is tie"
-        }
+        DisplayLabel.text = "Hello \(name)"
+        DisplayLabel1.text = "Amount Rs. \(Inr) in USD is $ \(dollarsround) "
+        DisplayLabel2.text = "Amount $ \(Usd) in INR is Rs \(rupeesround)"
+        
+        
         
         
     }
     
 }
 
-
-
-
-An IBOutlet (Interface Builder outlet) is a variable which is a reference to a UI component.
-
-An IBAction (Interface Builder action) is a function which is called when a specific user interaction occurs.
-@IBOutlet is used to reference the view from your controller code.
-@IBAction is used to view call a method in your controller code when the user interacts with the view.
-func avg(arr1 Double...) -> Double {
-    var total = 0.0
-    for x in arr1 {
-        total += x
-    }
-    let count= Double(x.count)
-    var average = total/count
-    return average
-}
